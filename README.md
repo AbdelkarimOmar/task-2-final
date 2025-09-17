@@ -88,8 +88,22 @@ From this research I can conclude that public trust in news is not built through
 ![Alt text](IMG_1419.jpeg "Optional Title")
 ![Alt text](IMG_1420.jpeg "Optional Title")
 
+#### Evaluation
 
+1. An average score of approximately 6 out of 10, in terms of the relevance of news, suggests lenient global enlightenment among 11 peers.
+1. Instagram is the most popular social media app for news, followed by ABC News, TikTok and Google News.
+    - While Instagram itself is not a source of news or information, it seems to be the most frequently used app for news among peers.
+1. An average score of approximately 7 out of 10, in terms of how trustworthy the apps used for news seem, suggests that a majority of the news on these platforms feels legitimate.
+1. A majority of students don’t check the news more than once or twice a week, suggesting low frequency in the update of general news around the world.
+1. 9/10 students are familiar with the distinguishment between verified and non-verified accounts on mainstream social media.
+1. 9/11 students believe that verified accounts offer more accurate and reliable information than non-verified accounts.
+1. Based on their previous responses, 10/11 students would be more comfortable being given important news headlines from trusted sources than from an ordinary non-credible source - which makes sense.
 
+### UI/UX Design
+![Alt text](uiux.jpg "Optional Title")
+
+### Prototype
+![Alt text](prototype.jpg)
 
 ## Producing and Implementing
 
