@@ -1,0 +1,281 @@
+
+    :root{
+      --nav-blue:#2f4f77; /* dark blue navbar */
+      --muted:#bdbdbd;
+      --text:#111;
+      --genre-color:#9a9a9a;
+      --desc-color:#9e9e9e;
+      --box-bg: #f5f5f5;
+      --gap: 20px; /* gap between boxes (also used horizontally) */
+      --content-margin: 12px;
+      --nav-height:64px;
+    }
+
+    /* reset */
+    *{box-sizing:border-box;margin:0;padding:0;font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    html,body{height:100%;background:#fff;color:var(--text);}
+
+    /* NAVBAR (fixed) */
+    .topbar{
+      position:fixed;
+      left:0;right:0;top:0;
+      height:var(--nav-height);
+      background:var(--nav-blue);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:1000;
+      box-shadow:0 2px 6px rgba(0,0,0,0.08);
+    }
+    .topbar-inner{
+      width:100%;
+      max-width:1200px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 16px;
+    }
+
+    .brand{
+      font-weight:700;
+      font-size:22px;
+      letter-spacing:0.2px;
+      user-select:none;
+    }
+
+    /* Nav links centered with spacing ~27px */
+    .nav-center{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:27px; /* requested spacing */
+      flex:1;
+      margin:0 12px;
+    }
+    .nav-links{display:flex;gap:27px;align-items:center;}
+    .nav-links a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      opacity:0.95;
+      font-size:15px;
+      padding:6px 4px;
+    }
+    .nav-links a:hover{opacity:1;text-decoration:underline;}
+
+    /* search icon and search input */
+    .search-btn{
+      cursor:pointer;
+      background:transparent;
+      border:0;
+      color:#fff;
+      font-size:18px;
+      display:inline-flex;
+      align-items:center;
+    }
+    .search-wrap{
+      display:none;
+      align-items:center;
+      width:100%;
+      justify-content:center;
+    }
+    .search-wrap.active{display:flex;}
+    .search-input{
+      width:60%;
+      max-width:520px;
+      height:36px;
+      border-radius:4px;
+      border:1px solid rgba(255,255,255,0.4);
+      padding:6px 10px;
+      font-size:15px;
+      outline:none;
+      background:rgba(255,255,255,0.06);
+      color:#fff;
+    }
+    .search-input::placeholder{color:rgba(255,255,255,0.8);}
+
+    /* Make sure nav content is accessible on small screens */
+    @media (max-width:640px){
+      .nav-links{display:none;}
+      .nav-center{gap:14px;}
+      .brand{font-size:18px;}
+    }
+
+    /* Main content offset below fixed navbar */
+    main{
+      padding-top:calc(var(--nav-height) + 16px);
+      max-width:1200px;
+      margin:0 auto;
+      padding-left:var(--content-margin);
+      padding-right:var(--content-margin);
+    }
+
+    h1.page-title{
+      font-size:34px;
+      margin:8px 0 18px 0;
+      font-weight:700;
+    }
+
+    /* TWO-COLUMN GRID */
+    .news-grid{
+      display:grid;
+      grid-template-columns: 1fr 1.15fr; /* right column slightly wider */
+      column-gap:var(--gap);
+      row-gap:var(--gap);
+      align-items:start;
+    }
+
+    /* Left column boxes stack vertically with equal dimensions */
+    .left-stack{
+      display:grid;
+      grid-auto-rows:220px; /* each left box fixed height */
+      row-gap:var(--gap);
+    }
+
+    .right-stack{
+      display:grid;
+      grid-template-rows: calc(220px * 2 + var(--gap)) 220px; /* top big box = two left boxes + gap */
+      row-gap:var(--gap);
+    }
+
+    /* Generic box style */
+    .news-box{
+      background:var(--box-bg);
+      display:flex;
+      align-items:stretch;
+      padding:12px;
+      box-shadow:0 1px 0 rgba(0,0,0,0.03) inset;
+    }
+
+    .news-image{
+      flex:0 0 34%;
+      max-width:34%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding-right:12px;
+    }
+    .news-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:3px;
+    }
+
+    .news-text{
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding-left:6px;
+    }
+    .genre{
+      font-size:14px;
+      color:var(--genre-color);
+      text-transform:lowercase;
+      margin-bottom:6px;
+      font-weight:600;
+    }
+    .headline{
+      font-size:20px;
+      line-height:1.08;
+      font-weight:700;
+      color:var(--text);
+      margin-bottom:8px;
+    }
+    .desc{
+      color:var(--desc-color);
+      font-size:14px;
+      line-height:1.35;
+    }
+
+    /* Larger styles for the global box */
+    .global-box .headline{
+      font-size:44px;
+      word-break:break-word;
+      line-height:1;
+      color:#000;
+    }
+    .global-box .desc{
+      font-size:18px;
+      color: #b7b7b7;
+    }
+    .global-box .news-image{flex-basis:46%;max-width:46%;}
+    .global-box .news-text{padding-left:18px;}
+
+    /* Right-bottom entertainment box tweaks: smaller headline like others */
+    .entertainment-box .headline{font-size:20px;}
+    .entertainment-box .genre{font-size:14px;}
+
+    /* ensure boxes shrink nicely on narrow screens */
+    @media (max-width:900px){
+      .news-grid{grid-template-columns: 1fr; }
+      .left-stack, .right-stack{grid-auto-rows:auto; grid-template-rows: none;}
+      .right-stack{grid-template-rows:none;}
+      .news-image{flex-basis:40%;max-width:40%;}
+      .global-box .headline{font-size:28px;}
+    }
+
+    /* small footer spacing */
+    footer{height:40px;}
+
+/* ARTICLE PAGE LAYOUT */
+.article-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: calc(var(--nav-height) + 16px);
+  padding-left: var(--content-margin);
+  padding-right: var(--content-margin);
+}
+
+.article-main .genre {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--genre-color);
+  margin-bottom: 6px;
+  text-transform: lowercase;
+}
+
+.article-main .headline {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.article-main .desc {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 24px;
+}
+
+.article-body {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.article-image {
+  flex: 0 0 55%;
+}
+
+.article-image img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.article-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+}
+
+@media (max-width: 900px) {
+  .article-body {
+    flex-direction: column;
+  }
+  .article-image { flex: none; }
+}

@@ -1,11 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>storyboard™ — global</title>
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <!-- Your content goes here -->
+  <header class="topbar" role="banner" aria-label="Main navigation">
+    <div class="topbar-inner">
+      <div class="brand">
+        <a href="index.html" style="color:white;text-decoration:none;">
+          storyboard<span style="opacity:0.85;font-weight:600;">™</span>
+        </a>
+      </div>
+
+      <div class="nav-center" aria-hidden="false">
+        <nav class="nav-links" id="navLinks" role="navigation" aria-label="Primary">
+          <a href="sport.html">sports</a>
+          <a href="global.html">global</a>
+          <a href="political.html">politics</a>
+          <a href="lifestyle.html">lifestyle</a>
+          <a href="entertainment.html">entertainment</a>
+        </nav>
+
+        <div class="search-wrap" id="searchWrap" role="search" aria-hidden="true">
+          <form onsubmit="return false;" style="width:100%;display:flex;justify-content:center;">
+            <input class="search-input" id="siteSearch" placeholder="Search site by keyword..." aria-label="Site search" />
+          </form>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="search-btn" id="searchToggle" title="Search" aria-pressed="false" aria-controls="searchWrap">🔍</button>
+        <button class="search-btn" id="searchClose" style="display:none;" title="Close search" aria-hidden="true">✖</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="article-main">
+      <div class="genre">global</div>
+      <h1 class="headline">tram accident in portugal kills 16, injures 23</h1>
+      <p class="desc">railway crash claims the lives of 16 in lisbon, portugal leaving at least 23 injured – survivors recall the overwhelming feeling of their lives coming to an end</p>
+
+      <div class="article-body">
+        <div class="article-image">
+          <img src="globalimg.png" alt="a-league football kickoff">
+        </div>
+        <div class="article-text">
+          <p>
+            Emergency services in Lisbon have confirmed that a tram derailment resulted in the deaths of 16 people and left 23 others with injuries ranging from minor to critical. Witnesses described scenes of panic and confusion as passengers struggled to escape the wreckage.</p>
+          <p>
+            Survivors recalled the overwhelming fear as the tram lost control, with some believing they would not make it out alive. Authorities are investigating the cause of the crash, and tributes have been pouring in from across Portugal for the victims and their families.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

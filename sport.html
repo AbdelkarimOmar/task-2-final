@@ -1,11 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>storyboard™ — sports</title>
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <!-- Your content goes here -->
+  <header class="topbar" role="banner" aria-label="Main navigation">
+    <div class="topbar-inner">
+      <div class="brand">
+        <a href="index.html" style="color:white;text-decoration:none;">
+          storyboard<span style="opacity:0.85;font-weight:600;">™</span>
+        </a>
+      </div>
+
+      <div class="nav-center" aria-hidden="false">
+        <nav class="nav-links" id="navLinks" role="navigation" aria-label="Primary">
+          <a href="sport.html">sports</a>
+          <a href="global.html">global</a>
+          <a href="political.html">politics</a>
+          <a href="lifestyle.html">lifestyle</a>
+          <a href="entertainment.html">entertainment</a>
+        </nav>
+
+        <div class="search-wrap" id="searchWrap" role="search" aria-hidden="true">
+          <form onsubmit="return false;" style="width:100%;display:flex;justify-content:center;">
+            <input class="search-input" id="siteSearch" placeholder="Search site by keyword..." aria-label="Site search" />
+          </form>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="search-btn" id="searchToggle" title="Search" aria-pressed="false" aria-controls="searchWrap">🔍</button>
+        <button class="search-btn" id="searchClose" style="display:none;" title="Close search" aria-hidden="true">✖</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="article-main">
+      <div class="genre">sports</div>
+      <h1 class="headline">a-league kicks off again</h1>
+      <p class="desc">the 2024-2025 season in men's top tier football comes to an end and we start the new season after a long break</p>
+
+      <div class="article-body">
+        <div class="article-image">
+          <img src="sportimg.png" alt="a-league football kickoff">
+        </div>
+        <div class="article-text">
+          <p>
+            The return of the A-League from last season marks an exciting new chapter for Australian football. After months of anticipation, fans are eager to see how their teams will perform with refreshed squads, new managers, and young talent ready to make their mark in the coming year.
+          </p>
+          <p>
+            Clubs across the league have worked hard in the off-season, strengthening their rosters and building momentum. Supporters are optimistic about the competitiveness of the 2025–26 season, which promises thrilling matches, local rivalries, and memorable moments on the pitch.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

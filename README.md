@@ -50,7 +50,7 @@ Therefore I select making a news outlet for my project.
 ### Exploring existing ideas
 | App                  | Plus                                                                                                                                                                                                 | Minus                                                                                     | Implication                          |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|--------------------------------------|
-| ABC News              | Gives the user all kinds of insight on important things besides just news, e.g. weather, which is a more unique approach than other news websites<br><br>Displays news articles of all kinds of topics for the appeal of everyone - breaking news, sports, local-based news, politics, recipes…<br><br>Gives you personalized use based on your approximate location within Australia<br><br>Responsive layout so that all device dimensions have a comfortable, usable appearance | Crowded interface, all the news briefs trying to be fit on one webpage<br><br>Not such an adequate use of space, the website margins squeeze the content into small spaces | Responsive Layout                    |
+| ABC News              | Gives the user all kinds of insight on important things besides just news, e.g. weather, which is a more unique approach than other news websites<br><br>Displays news articles of all kinds of topics for the appeal of everyone - breaking news, sports, local-based news, politics, recipes etc<br><br>Gives you personalized use based on your approximate location within Australia<br><br>Responsive layout so that all device dimensions have a comfortable, usable appearance | Crowded interface, all the news briefs trying to be fit on one webpage<br><br>Not such an adequate use of space, the website margins squeeze the content into small spaces | Responsive Layout                    |
 | New York Times        | Very traditional layout which can make it easier for a wider variety of audience to interpret/interact<br><br>Adequate contrast between the background and the text in a white-black scheme<br><br>Literally tells you the estimated time it would take to read an article at an average pace | Font can be a tad hard to read because it is squeezed                                        | Estimated time to read an article    |
 | Sydney Morning Herald | “Helpful” site - instead of giving you all it has to offer and leaving you to find it autonomously, the website tries to help you find what you’re looking for.                                      | Crowded                                        | Complex search bar system                                                  |
 
@@ -99,6 +99,10 @@ From this research I can conclude that public trust in news is not built through
 1. 9/11 students believe that verified accounts offer more accurate and reliable information than non-verified accounts.
 1. Based on their previous responses, 10/11 students would be more comfortable being given important news headlines from trusted sources than from an ordinary non-credible source - which makes sense.
 
+Moving forward with my project, the primary research results affect the intricacy of the information presented to the audience. It seems that there is no extensive regard for credibility, as it's apparently usually taken for granted when news is presented to them.
+
+As for the secondary research evaluation: it comes hand-in-hand with the primary research that students at GHS are precedented to believe the news more – having a (relatively) high education status, to assume the least, already putting them higher on the list of most likely to believe the news.
+
 ### UI/UX Design
 ![Alt text](uiux.jpg "Optional Title")
 
@@ -106,5 +110,13 @@ From this research I can conclude that public trust in news is not built through
 ![Alt text](prototype.jpg)
 
 ## Producing and Implementing
+
+### Development
+- My web app will be constructed using HTML, CSS and JavaScript (JS)
+
+### Documentation
+- All here ^
+
+
 
 ## Testing and Evaluating

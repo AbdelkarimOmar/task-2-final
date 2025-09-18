@@ -1,11 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>storyboard™ — entertainment</title>
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <!-- Your content goes here -->
+  <header class="topbar" role="banner" aria-label="Main navigation">
+    <div class="topbar-inner">
+      <div class="brand">
+        <a href="index.html" style="color:white;text-decoration:none;">
+          storyboard<span style="opacity:0.85;font-weight:600;">™</span>
+        </a>
+      </div>
+
+      <div class="nav-center" aria-hidden="false">
+        <nav class="nav-links" id="navLinks" role="navigation" aria-label="Primary">
+          <a href="sport.html">sports</a>
+          <a href="global.html">global</a>
+          <a href="political.html">politics</a>
+          <a href="lifestyle.html">lifestyle</a>
+          <a href="entertainment.html">entertainment</a>
+        </nav>
+
+        <div class="search-wrap" id="searchWrap" role="search" aria-hidden="true">
+          <form onsubmit="return false;" style="width:100%;display:flex;justify-content:center;">
+            <input class="search-input" id="siteSearch" placeholder="search site by keyword..." aria-label="Site search" />
+          </form>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="search-btn" id="searchToggle" title="Search" aria-pressed="false" aria-controls="searchWrap">🔍</button>
+        <button class="search-btn" id="searchClose" style="display:none;" title="Close search" aria-hidden="true">✖</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="article-main">
+      <div class="genre">entertainment</div>
+      <h1 class="headline">top 10 movies of the 21st century ranked</h1>
+      <p class="desc">film critics rank the best 10 movies to mark the first quarter of the 21st century – find your favourites in this list</p>
+
+      <div class="article-body">
+        <div class="article-image">
+          <img src="entertainmentimg.png" alt="a-league football kickoff">
+        </div>
+        <div class="article-text">
+          <p>
+            A panel of film critics has revealed their rankings of the top 10 movies of the 21st century so far. The list reflects a balance between groundbreaking storytelling, cultural impact, and artistic achievement.</p>
+          <p>
+            <ul>
+  <li>Spirited Away (2001)</li>
+  <li>The Lord of the Rings: The Return of the King (2003)</li>
+  <li>No Country for Old Men (2007)</li>
+  <li>There Will Be Blood (2007)</li>
+  <li>The Dark Knight (2008)</li>
+  <li>Inception (2010)</li>
+  <li>The Social Network (2010)</li>
+  <li>Mad Max: Fury Road (2015)</li>
+  <li>Moonlight (2016)</li>
+  <li>Parasite (2019)</li>
+</ul>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

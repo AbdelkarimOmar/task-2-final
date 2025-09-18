@@ -1,11 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>storyboard™ — politics</title>
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <!-- Your content goes here -->
+  <header class="topbar" role="banner" aria-label="Main navigation">
+    <div class="topbar-inner">
+      <div class="brand">
+        <a href="index.html" style="color:white;text-decoration:none;">
+          storyboard<span style="opacity:0.85;font-weight:600;">™</span>
+        </a>
+      </div>
+
+      <div class="nav-center" aria-hidden="false">
+        <nav class="nav-links" id="navLinks" role="navigation" aria-label="Primary">
+          <a href="sport.html">sports</a>
+          <a href="global.html">global</a>
+          <a href="political.html">politics</a>
+          <a href="lifestyle.html">lifestyle</a>
+          <a href="entertainment.html">entertainment</a>
+        </nav>
+
+        <div class="search-wrap" id="searchWrap" role="search" aria-hidden="true">
+          <form onsubmit="return false;" style="width:100%;display:flex;justify-content:center;">
+            <input class="search-input" id="siteSearch" placeholder="search site by keyword..." aria-label="Site search" />
+          </form>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="search-btn" id="searchToggle" title="Search" aria-pressed="false" aria-controls="searchWrap">🔍</button>
+        <button class="search-btn" id="searchClose" style="display:none;" title="Close search" aria-hidden="true">✖</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="article-main">
+      <div class="genre">politics</div>
+      <h1 class="headline">australian government discusses racism situation</h1>
+      <p class="desc">pm anthony albanese adresses the problem racism has become in this country, takes action to emphasise australia’s multicultural approach</p>
+
+      <div class="article-body">
+        <div class="article-image">
+          <img src="politicalimg.png" alt="a-league football kickoff">
+        </div>
+        <div class="article-text">
+          <p>
+            Prime Minister Anthony Albanese has addressed the growing concern about racism in Australia, acknowledging it as a pressing national issue. Speaking at a multicultural forum, he emphasized the importance of inclusivity and reaffirmed the government’s commitment to diversity.</p>
+          <p>
+            Measures are being proposed to strengthen anti-discrimination laws, improve education on cultural awareness, and promote community initiatives that support integration. While welcomed by many, the announcement has also sparked debate about whether the government’s response will go far enough to tackle systemic issues.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

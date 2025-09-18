@@ -1,11 +1,173 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>storyboard™ — home</title>
+  <link rel="stylesheet" href="stylesheet.css"> 
 </head>
 <body>
-    <!-- Your content goes here -->
+  <header class="topbar" role="banner" aria-label="Main navigation">
+    <div class="topbar-inner">
+      <div class="brand">storyboard<span style="opacity:0.85;font-weight:600;">™</span></div>
+
+      <div class="nav-center" aria-hidden="false">
+        <!-- Normal links (hidden when search active) -->
+        <nav class="nav-links" id="navLinks" role="navigation" aria-label="Primary">
+          <a href="sport.html">sports</a>
+          <a href="global.html">global</a>
+          <a href="political.html">politics</a>
+          <a href="lifestyle.html">lifestyle</a>
+          <a href="entertainment.html">entertainment</a>
+        </nav>
+
+        <!-- Search view (hidden by default) -->
+        <div class="search-wrap" id="searchWrap" role="search" aria-hidden="true">
+          <form onsubmit="return false;" style="width:100%;display:flex;justify-content:center;">
+            <input class="search-input" id="siteSearch" placeholder="Search site by keyword..." aria-label="Site search" />
+          </form>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="search-btn" id="searchToggle" title="Search" aria-pressed="false" aria-controls="searchWrap">
+          🔍
+        </button>
+        <button class="search-btn" id="searchClose" style="display:none;" title="Close search" aria-hidden="true">✖</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">what’s new</h1>
+
+    <section class="news-grid" aria-label="Latest news">
+      <!-- LEFT COLUMN: stacked boxes -->
+      <div class="left-stack" aria-hidden="false">
+        <!-- Sports -->
+        <article class="news-box sports-box" role="article" aria-label="Sports headline">
+          <div class="news-image">
+            <img src="sportimg.png" alt="sports image">
+          </div>
+          <div class="news-text">
+            <div class="genre">sports</div>
+            <div class="headline">a-league kicks off again</div>
+            <div class="desc">the 2024-2025 season in men's top tier football comes to an end and we start the new season after a long break</div>
+          </div>
+        </article>
+
+        <!-- Politics -->
+        <article class="news-box politics-box" role="article" aria-label="Politics headline">
+          <div class="news-image">
+            <img src="politicalimg.png" alt="politics image">
+          </div>
+          <div class="news-text">
+            <div class="genre">politics</div>
+            <div class="headline">australian government discusses racism situation</div>
+            <div class="desc">pm anthony albanese addresses the problem racism has become in this country, takes action to emphasise australia’s multicultural approach</div>
+          </div>
+        </article>
+
+        <!-- Lifestyle -->
+        <article class="news-box lifestyle-box" role="article" aria-label="Lifestyle headline">
+          <div class="news-image">
+            <img src="lifestyleimg.png" alt="lifestyle image">
+          </div>
+          <div class="news-text">
+            <div class="genre">lifestyle</div>
+            <div class="headline">effects of reducing screen time prove to be life changing</div>
+            <div class="desc">people of australia share their experiences of self-improvement by limiting extended daily screen time</div>
+          </div>
+        </article>
+      </div>
+
+      <!-- RIGHT COLUMN: global top (big) + entertainment bottom -->
+      <div class="right-stack">
+        <!-- Global (big) -->
+        <article class="news-box global-box" role="article" aria-label="Global headline">
+          <div class="news-image">
+            <!-- prefer developer-provided image if present, fallback to globalimg.png -->
+            <img src="/mnt/data/B3274D8F-D284-4492-8400-964F422ADF41.jpeg" onerror="this.onerror=null;this.src='globalimg.png';" alt="global incident">
+          </div>
+          <div class="news-text">
+            <div class="genre">global</div>
+            <div class="headline">tram accident in portugal kills 16, injures 23</div>
+            <div class="desc">railway crash claims the lives of 16 in lisbon, portugal leaving at least 23 injured – survivors recall the overwhelming feeling of their lives coming to an end</div>
+          </div>
+        </article>
+
+        <!-- Entertainment (bottom) -->
+        <article class="news-box entertainment-box" role="article" aria-label="Entertainment headline">
+          <div class="news-image">
+            <img src="entertainmentimg.png" alt="entertainment image">
+          </div>
+          <div class="news-text">
+            <div class="genre">entertainment</div>
+            <div class="headline">top 10 movies of the 21st century ranked</div>
+            <div class="desc">film critics rank the best 10 movies to mark the first quarter of the 21st century – find your favourites in this list</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer></footer>
+  </main>
+
+  <script>
+    // Search toggle behaviour: clicking search hides the links and shows the search input.
+    const searchToggle = document.getElementById('searchToggle');
+    const searchClose = document.getElementById('searchClose');
+    const navLinks = document.getElementById('navLinks');
+    const searchWrap = document.getElementById('searchWrap');
+    const searchInput = document.getElementById('siteSearch');
+
+    function openSearch(){
+      navLinks.style.display = 'none';
+      searchWrap.classList.add('active');
+      searchWrap.setAttribute('aria-hidden','false');
+      searchToggle.style.display = 'none';
+      searchClose.style.display = '';
+      searchClose.setAttribute('aria-hidden','false');
+      searchClose.focus();
+      if(searchInput) searchInput.focus();
+      searchToggle.setAttribute('aria-pressed','true');
+    }
+    function closeSearch(){
+      navLinks.style.display = '';
+      searchWrap.classList.remove('active');
+      searchWrap.setAttribute('aria-hidden','true');
+      searchToggle.style.display = '';
+      searchClose.style.display = 'none';
+      searchClose.setAttribute('aria-hidden','true');
+      searchToggle.setAttribute('aria-pressed','false');
+    }
+
+    searchToggle.addEventListener('click', openSearch);
+    searchClose.addEventListener('click', closeSearch);
+
+    // Basic site search (word match) — finds headings and descriptions (client-side)
+    (function(){
+      if(!searchInput) return;
+      searchInput.addEventListener('keydown', function(e){
+        if(e.key === 'Enter'){
+          const q = this.value.trim().toLowerCase();
+          if(!q) { alert('Please enter a search term.'); return; }
+          // Simple highlighting/filter: show matching boxes only (by text content)
+          const boxes = document.querySelectorAll('.news-box');
+          let found = 0;
+          boxes.forEach(box => {
+            const text = (box.innerText || '').toLowerCase();
+            if(text.indexOf(q) !== -1){
+              box.style.display = 'flex';
+              found++;
+            } else {
+              box.style.display = 'none';
+            }
+          });
+          if(found === 0) alert('No results found for: ' + q);
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

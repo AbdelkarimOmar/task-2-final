@@ -1,11 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>storyboard™ — lifestyle</title>
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <!-- Your content goes here -->
+  <header class="topbar" role="banner" aria-label="Main navigation">
+    <div class="topbar-inner">
+      <div class="brand">
+        <a href="index.html" style="color:white;text-decoration:none;">
+          storyboard<span style="opacity:0.85;font-weight:600;">™</span>
+        </a>
+      </div>
+
+      <div class="nav-center" aria-hidden="false">
+        <nav class="nav-links" id="navLinks" role="navigation" aria-label="Primary">
+          <a href="sport.html">sports</a>
+          <a href="global.html">global</a>
+          <a href="political.html">politics</a>
+          <a href="lifestyle.html">lifestyle</a>
+          <a href="entertainment.html">entertainment</a>
+        </nav>
+
+        <div class="search-wrap" id="searchWrap" role="search" aria-hidden="true">
+          <form onsubmit="return false;" style="width:100%;display:flex;justify-content:center;">
+            <input class="search-input" id="siteSearch" placeholder="search site by keyword..." aria-label="Site search" />
+          </form>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="search-btn" id="searchToggle" title="Search" aria-pressed="false" aria-controls="searchWrap">🔍</button>
+        <button class="search-btn" id="searchClose" style="display:none;" title="Close search" aria-hidden="true">✖</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="article-main">
+      <div class="genre">lifestyle</div>
+      <h1 class="headline">effects of reducing screen time prove to be life changing</h1>
+      <p class="desc">people of australia share their experiences of self-improvement by limiting extended daily screen time</p>
+
+      <div class="article-body">
+        <div class="article-image">
+          <img src="lifestyleimg.png" alt="a-league football kickoff">
+        </div>
+        <div class="article-text">
+          <p>
+            Australians are increasingly reporting lifestyle improvements after cutting extended daily screen time. Many say the change has led to better sleep, stronger relationships, and more productive use of their free hours.</p>
+          <p>
+            Experts suggest that reducing screen dependency can also help lower stress levels and improve mental health. Social groups and schools are encouraging challenges that promote limited screen use, showing that even small changes can have lasting positive effects on overall wellbeing.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
