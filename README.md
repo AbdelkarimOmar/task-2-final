@@ -128,7 +128,7 @@ As for the secondary research evaluation: it comes hand-in-hand with the primary
 #### MY OWN PROJECT 
 My project effectively meets functional and non functional requirements. The purpose was to explore misinformation in the media as an influence, which was implemented in the development of the web app. 
 
-The project's intention was to delve into the credibility of popular news sources such as ABC News and New York Times, as well other mainstream news places such as Instagram, TikTok, etc... it's sustainability 
+The project's intention was to delve into the credibility of popular news sources such as ABC News and New York Times, as well other mainstream news places such as Instagram, TikTok, etc to identify issues in the reliability of news around the world. 
 
 
 ### Evaluation of Issues
