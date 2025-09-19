@@ -117,6 +117,39 @@ As for the secondary research evaluation: it comes hand-in-hand with the primary
 ### Documentation
 - All here ^
 
+### Version Control
+- All present in GitHub
 
 
 ## Testing and Evaluating
+
+### Peer Evaluation
+
+#### MY OWN PROJECT 
+My project effectively meets functional and non functional requirements. The purpose was to explore misinformation in the media as an influence, which was implemented in the development of the web app. 
+
+The project's intention was to delve into the credibility of popular news sources such as ABC News and New York Times, as well other mainstream news places such as Instagram, TikTok, etc... it's sustainability 
+
+
+### Evaluation of Issues
+
+Social and ethical issues for this project (they come hand in hand) can include the spread of misinformation and bias.
+
+Legal issues include copyright and defamation. 
+
+### Project Evaluation
+My project meets the predertimend functional requirements:
+- users can view a list of articles ✔️
+- users can search for news articles in the search bar ✔️
+    - they can somewhat do this in the home page by searching for key words
+- user can click any link and it takes them to the correct webpage ✔️
+- users can be viewing the web app from a variety of different devices and it responsively adjusts ✔️
+
+My project also meets predetermined non-functional requirements:
+- pages should load very smoothly taking no more than 2 seconds ✔️
+- should have a sufficiently sized text for reading ✔️
+- an accessible font that is not hard to read ✔️
+
+The project was managed highly sufficiently through GitHub commits and, using an external code editor due to technology circumstances, the web app was developed to match the prototype (although not absolutely similar).
+
+For the target market, this web app provides a very convenient and trustworthy news source, although success depends on a user's digital habits, interest in niche content and the app's ability to stand out among other news apps similar to this.  
