@@ -279,3 +279,7 @@
   }
   .article-image { flex: none; }
 }
+
+.nodec {
+  text-decoration: none;
+}

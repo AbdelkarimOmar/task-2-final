@@ -42,10 +42,10 @@
     <h1 class="page-title">what’s new</h1>
 
     <section class="news-grid" aria-label="Latest news">
-      <!-- LEFT COLUMN: stacked boxes -->
+      <!-- left column -->
       <div class="left-stack" aria-hidden="false">
-        <!-- Sports -->
-        <article class="news-box sports-box" role="article" aria-label="Sports headline">
+        <!-- sports -->
+        <article class="news-box sports-box nodec" role="article" aria-label="Sports headline" href="sport.html">
           <div class="news-image">
             <img src="sportimg.png" alt="sports image">
           </div>
@@ -56,8 +56,8 @@
           </div>
         </article>
 
-        <!-- Politics -->
-        <article class="news-box politics-box" role="article" aria-label="Politics headline">
+        <!-- politics -->
+        <article class="news-box politics-box nodec" role="article" aria-label="Politics headline" href="political.html">
           <div class="news-image">
             <img src="politicalimg.png" alt="politics image">
           </div>
@@ -68,8 +68,8 @@
           </div>
         </article>
 
-        <!-- Lifestyle -->
-        <article class="news-box lifestyle-box" role="article" aria-label="Lifestyle headline">
+        <!-- lifestyle -->
+        <article class="news-box lifestyle-box nodec" role="article" aria-label="Lifestyle headline" href="lifestyle.html">
           <div class="news-image">
             <img src="lifestyleimg.png" alt="lifestyle image">
           </div>
@@ -81,12 +81,12 @@
         </article>
       </div>
 
-      <!-- RIGHT COLUMN: global top (big) + entertainment bottom -->
+      <!-- right column, big global box and stuff -->
       <div class="right-stack">
-        <!-- Global (big) -->
-        <article class="news-box global-box" role="article" aria-label="Global headline">
+        <!-- global (big) -->
+        <article class="news-box global-box nodec" role="article" aria-label="Global headline" href="global.html">
           <div class="news-image">
-            <!-- prefer developer-provided image if present, fallback to globalimg.png -->
+            <!-- trying something here -->
             <img src="/mnt/data/B3274D8F-D284-4492-8400-964F422ADF41.jpeg" onerror="this.onerror=null;this.src='globalimg.png';" alt="global incident">
           </div>
           <div class="news-text">
@@ -96,8 +96,8 @@
           </div>
         </article>
 
-        <!-- Entertainment (bottom) -->
-        <article class="news-box entertainment-box" role="article" aria-label="Entertainment headline">
+        <!-- entertainment (bottom) -->
+        <article class="news-box entertainment-box nodec" role="article" aria-label="Entertainment headline" href="entertainment.html">
           <div class="news-image">
             <img src="entertainmentimg.png" alt="entertainment image">
           </div>
@@ -113,61 +113,9 @@
     <footer></footer>
   </main>
 
-  <script>
-    // Search toggle behaviour: clicking search hides the links and shows the search input.
-    const searchToggle = document.getElementById('searchToggle');
-    const searchClose = document.getElementById('searchClose');
-    const navLinks = document.getElementById('navLinks');
-    const searchWrap = document.getElementById('searchWrap');
-    const searchInput = document.getElementById('siteSearch');
+    <!-- none of the boxes get you to the webpages no time to fix :( -->
 
-    function openSearch(){
-      navLinks.style.display = 'none';
-      searchWrap.classList.add('active');
-      searchWrap.setAttribute('aria-hidden','false');
-      searchToggle.style.display = 'none';
-      searchClose.style.display = '';
-      searchClose.setAttribute('aria-hidden','false');
-      searchClose.focus();
-      if(searchInput) searchInput.focus();
-      searchToggle.setAttribute('aria-pressed','true');
-    }
-    function closeSearch(){
-      navLinks.style.display = '';
-      searchWrap.classList.remove('active');
-      searchWrap.setAttribute('aria-hidden','true');
-      searchToggle.style.display = '';
-      searchClose.style.display = 'none';
-      searchClose.setAttribute('aria-hidden','true');
-      searchToggle.setAttribute('aria-pressed','false');
-    }
-
-    searchToggle.addEventListener('click', openSearch);
-    searchClose.addEventListener('click', closeSearch);
-
-    // Basic site search (word match) — finds headings and descriptions (client-side)
-    (function(){
-      if(!searchInput) return;
-      searchInput.addEventListener('keydown', function(e){
-        if(e.key === 'Enter'){
-          const q = this.value.trim().toLowerCase();
-          if(!q) { alert('Please enter a search term.'); return; }
-          // Simple highlighting/filter: show matching boxes only (by text content)
-          const boxes = document.querySelectorAll('.news-box');
-          let found = 0;
-          boxes.forEach(box => {
-            const text = (box.innerText || '').toLowerCase();
-            if(text.indexOf(q) !== -1){
-              box.style.display = 'flex';
-              found++;
-            } else {
-              box.style.display = 'none';
-            }
-          });
-          if(found === 0) alert('No results found for: ' + q);
-        }
-      });
-    })();
+  <script src="script.js">
   </script>
 </body>
 </html>
